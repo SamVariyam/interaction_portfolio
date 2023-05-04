@@ -1,0 +1,114 @@
+canvas{
+z-index:-99; 
+opacity: 2%;
+filter: blur(2px);
+}
+
+/* general styling */
+body{
+  background-image: url("background-image.png")
+}
+
+h1{
+  font-family: 'Kumar One', cursive;
+  font-size:170px;
+  color: #A5FF5B;
+}
+
+h2{
+  font-family: 'Exo', sans-serif;
+  font-size:40px;
+  color: #A5FF5B;
+  line-height:0;
+}
+
+.link{
+  font-family: 'Exo', sans-serif;
+  font-size:30px;
+  color: #A5FF5B;
+  text-decoration:none;
+}
+
+.link:hover{
+  animation: bounce 1s;
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+a:visited {
+  color:#A5FF5B
+}
+
+
+/* sections */
+.name-info{
+  display:flex;
+  flex-direction:column;
+  text-align:right;
+  padding:0;
+  margin-top:15%;
+  margin-right:5%;
+
+}
+
+.name{
+  margin:0;
+  padding:0;
+}
+
+.name:hover{
+  transform: scale(1);
+  -webkit-animation: wiggle 0.4s;
+  }
+  @-webkit-keyframes wiggle {
+    0% { -webkit-transform: skewX(24deg)} 
+    10% { -webkit-transform: skewX(-8deg); transform: scale(1);}
+    20% { -webkit-transform: skewX(55deg); transform: scale(1);}
+    30% { -webkit-transform: skewX(-90deg);transform: scale(1); }
+    40% { -webkit-transform: skewX(29deg);transform: scale(1); }
+    50% { -webkit-transform: skewX(-90deg);transform: scale(1); }
+    60% { -webkit-transform: skewX(3deg); transform: scale(1);}
+    70% { -webkit-transform: skewX(-2deg);transform: scale(1); }
+    80% { -webkit-transform: skewX(1deg); transform: scale(1);}
+    90% { -webkit-transform: skewX(10deg);transform: scale(1); }
+    100% { -webkit-transform: skewX(0deg);transform: scale(1); }
+}
+
+h1:hover{
+    -webkit-animation: wiggle 0.2s 2;
+    /*transition:all ease-out 0.1s;*/
+    text-shadow:30px 13px #A5FF5B,
+               -38px -4px #A5FF5B,
+               -2px -4px #A5FF5B;
+  
+  }
+
+
+.info{
+  margin:0;
+  padding:0;
+}
+
+.projects{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  width:80%;
+  margin:auto;
+  padding-top:20vh;
+  align-items:center;
+}
