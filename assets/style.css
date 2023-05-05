@@ -32,8 +32,7 @@ p{
   font-family: 'Kumar One', cursive;
   font-size:30px;
   color: #000000;
-  line-height:0;
-  position:relative;
+  text-align:center;
   text-shadow: 0 0 10px #A5FF5B, 0 0 20px #A5FF5B, 0 0 30px #A5FF5B; /* Set the text shadow to create the neon glow effect */
 }
 
@@ -43,14 +42,8 @@ p{
 
 .project-number{
   position:absolute;
-  z-index:55;
-  margin-left:40%;
+  margin-left:33%;
   margin-top:-30%;
-}
-
-.project-number-background{
-  background-color:black;
-  margin:10px;
 }
 
 
@@ -187,7 +180,7 @@ p{
 
 /* image blur */
 img{
-  filter: blur(3px);
+  filter: blur(4px);
   transition: filter 0.3s ease;
   z-index:0;
 }
