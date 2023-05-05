@@ -9,10 +9,16 @@ body{
   background-image: url("background-image.png")
 }
 
+.wrapper{
+  margin-top:200px;
+  height:90vh;
+}
+
 h1{
   font-family: 'Kumar One', cursive;
-  font-size:170px;
+  font-size:200px;
   color: #A5FF5B;
+  line-height:.9em;
 }
 
 h2{
@@ -22,36 +28,31 @@ h2{
   line-height:0;
 }
 
-.link{
-  font-family: 'Exo', sans-serif;
+p{
+  font-family: 'Kumar One', cursive;
   font-size:30px;
-  color: #A5FF5B;
-  text-decoration:none;
+  color: #000000;
+  line-height:0;
+  position:relative;
+  text-shadow: 0 0 10px #A5FF5B, 0 0 20px #A5FF5B, 0 0 30px #A5FF5B; /* Set the text shadow to create the neon glow effect */
 }
 
-.link:hover{
-  animation: bounce 1s;
+.project-container{
+  position:relative;
 }
 
-@keyframes bounce {
-  0%, 20%, 60%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-
-  40% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-
-  80% {
-    -webkit-transform: translateY(-10px);
-    transform: translateY(-10px);
-  }
+.project-number{
+  position:absolute;
+  z-index:55;
+  margin-left:40%;
+  margin-top:-30%;
 }
-a:visited {
-  color:#A5FF5B
+
+.project-number-background{
+  background-color:black;
+  margin:10px;
 }
+
 
 
 /* sections */
@@ -60,42 +61,14 @@ a:visited {
   flex-direction:column;
   text-align:right;
   padding:0;
-  margin-top:15%;
+  margin-top:5%;
   margin-right:5%;
 
 }
 
-.name{
-  margin:0;
-  padding:0;
-}
-
-.name:hover{
-  transform: scale(1);
-  -webkit-animation: wiggle 0.4s;
-  }
-  @-webkit-keyframes wiggle {
-    0% { -webkit-transform: skewX(24deg)} 
-    10% { -webkit-transform: skewX(-8deg); transform: scale(1);}
-    20% { -webkit-transform: skewX(55deg); transform: scale(1);}
-    30% { -webkit-transform: skewX(-90deg);transform: scale(1); }
-    40% { -webkit-transform: skewX(29deg);transform: scale(1); }
-    50% { -webkit-transform: skewX(-90deg);transform: scale(1); }
-    60% { -webkit-transform: skewX(3deg); transform: scale(1);}
-    70% { -webkit-transform: skewX(-2deg);transform: scale(1); }
-    80% { -webkit-transform: skewX(1deg); transform: scale(1);}
-    90% { -webkit-transform: skewX(10deg);transform: scale(1); }
-    100% { -webkit-transform: skewX(0deg);transform: scale(1); }
-}
-
-h1:hover{
-    -webkit-animation: wiggle 0.2s 2;
-    /*transition:all ease-out 0.1s;*/
-    text-shadow:30px 13px #A5FF5B,
-               -38px -4px #A5FF5B,
-               -2px -4px #A5FF5B;
-  
-  }
+.info:hover{
+  animation: glitch 1s infinite;
+} 
 
 
 .info{
@@ -107,8 +80,119 @@ h1:hover{
   display:flex;
   flex-direction:row;
   justify-content:space-between;
-  width:80%;
-  margin:auto;
-  padding-top:20vh;
+  width:90%;
+  margin-left:10%;
   align-items:center;
+  animation: move 5s linear infinite;
 }
+
+@keyframes move {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height:70vh;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+}
+
+.card {
+  width: 700px;
+  height: 400px;
+  margin: 10px;
+  border-radius:10px;
+  border: 2px solid #A5FF5B;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover{
+  animation: glitch 1s infinite;
+}
+
+.glitch {
+  font-size: 200px;
+  color: #A5FF5B;
+  margin:0;
+}
+
+.glitch:hover{
+  animation: glitch 1s infinite;
+  text-shadow: 
+    -1px -1px 0 #00c6ff,
+    1px -1px 0 #ff00a9,
+    -1px 1px 0 #ff8d00,
+    1px 1px 0 #833ab4;
+}
+
+@keyframes glitch {
+  0% {
+    transform: skew(0deg);
+    text-shadow: 
+      -1px -1px 0 #00c6ff,
+      1px -1px 0 #ff00a9,
+      -1px 1px 0 #ff8d00,
+      1px 1px 0 #833ab4;
+  }
+  20% {
+    transform: skew(10deg);
+    text-shadow: 
+      -1px -1px 0 #00c6ff,
+      1px -1px 0 #ff00a9,
+      -1px 1px 0 #ff8d00,
+      1px 1px 0 #833ab4;
+  }
+  40% {
+    transform: skew(-10deg);
+    text-shadow: 
+      -1px -1px 0 #ff8d00,
+      1px -1px 0 #00c6ff,
+      -1px 1px 0 #833ab4,
+      1px 1px 0 #ff00a9;
+  }
+  60% {
+    transform: skew(0deg);
+    text-shadow: 
+      -1px -1px 0 #ff8d00,
+      1px -1px 0 #00c6ff,
+      -1px 1px 0 #833ab4,
+      1px 1px 0 #ff00a9;
+  }
+  80% {
+    transform: skew(-10deg);
+    text-shadow: 
+      -1px -1px 0 #ff00a9,
+      1px -1px 0 #ff8d00,
+      -1px 1px 0 #00c6ff,
+      1px 1px 0 #833ab4;
+  }
+  100% {
+    transform: skew(0deg);
+    text-shadow: 
+      -1px -1px 0 #ff00a9,
+      1px -1px 0 #ff8d00,
+      -1px 1px 0 #00c6ff,
+      1px 1px 0 #833ab4;
+  }
+}
+
+
+/* image blur */
+img{
+  filter: blur(3px);
+  transition: filter 0.3s ease;
+  z-index:0;
+}
+
+img:hover{
+  filter:none;
+}
+
