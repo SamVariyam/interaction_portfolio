@@ -208,6 +208,6 @@ img:hover{
     margin:15px;
   }
   img{
-    filter:blue(2px);
+    filter:blur(2px);
   }
 }
