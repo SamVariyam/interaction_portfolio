@@ -189,3 +189,25 @@ img:hover{
   filter:none;
 }
 
+
+/* mobile */
+@media (max-width: 400px) {
+  .glitch{
+    font-size:60px;
+  }
+  h2{
+    font-size:30px;
+  }
+  .info{
+    padding-top:30px;
+  }
+  .container{
+    height:66vh;
+  }
+  .projects{
+    margin:15px;
+  }
+  img{
+    filter:blue(2px);
+  }
+}
